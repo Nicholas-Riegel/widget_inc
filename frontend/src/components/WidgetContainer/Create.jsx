@@ -34,19 +34,7 @@ const CreateWidget = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const newWidgetData = {
-            widget: inputWidget,
-            name: name,
-            price: price,
-            description: description
-        };
 
-        // Store new widget data returned from the service page routes
-        const newWidget = await WidgetServices.create(newWidgetData);
-
-        // if (newWidget) {
-        //     addWidget(newWidget); // Updates state in App.jsx
-        // }
 
         // Reset input fields
         setInputWidget('');

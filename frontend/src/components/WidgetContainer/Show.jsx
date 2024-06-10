@@ -12,7 +12,7 @@ const ShowWidget = ({handleDeleteWidget}) => {
   //useEffect hook is used to perform side effects in the component. In this case, it makes an HTTP GET request to fetch data about the widget with the id widgetId from a server running on localhost:8000. If the request is successful, it updates the widget state with the data received. If there's an error, it logs the error message.
 
   useEffect(() => {
-    axios
+    axios // This came before Fetch and does the same but with different syntex. It does the asynchronous request.
       .get(`http://3.14.175.247:8000/api/widgets/${widgetId}`)
       .then((response) => setWidget(response.data))
       .catch((error) =>
